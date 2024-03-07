@@ -68,9 +68,12 @@
     "utils-merge": "^1.0.1",
     "vary": "^1.1.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
   "scripts": {
-    "dev": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "prd": "node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
