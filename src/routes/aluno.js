@@ -13,7 +13,6 @@ module.exports = (app) => {
                 in: 'body',
                 type: 'json',
                 schema: {
-                   
                      id: 1, 
                      nome: "paulo", 
                      sobrenome: "estevao",
