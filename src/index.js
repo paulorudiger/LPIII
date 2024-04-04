@@ -1,6 +1,18 @@
 const express = require("express");
+
 const app = express();
 const port = 3000;
+
+
+const cookieParser = require('cookie-parser');
+
+app.use(cookieParser());
+
+app.get('/', (req,res) => {
+    res.cookie('meuCookie2024', 'abcde');
+    res.send('Hello World!'); 
+});
+
 require('./services/swagger.js')
 
 require('./routes')(app)
