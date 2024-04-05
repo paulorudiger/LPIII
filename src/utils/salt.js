@@ -1,9 +1,9 @@
 const crypto = require('crypto');
 
-function criarUsuario (usuario, senha){
+function criarUsuario (senha){
     const salt = generateSalt()
     const hashedPassword = hashPassword(senha, salt)
-    // chamar banco
+    return {salt, hashedPassword}
 }
 
 function generateSalt(){
@@ -18,4 +18,4 @@ function comparePassword(storedPassword, salt, providedPassword) {
     const hash = hashPassword(providedPassword, salt)
     return hash === storedPassword
 }
-
+module.exports.criarUsuario = criarUsuario;

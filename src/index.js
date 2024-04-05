@@ -3,11 +3,13 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+app.use(express.json());
 
 const cookieParser = require('cookie-parser');
 
 app.use(cookieParser());
 
+// posteriormente vai para o /login
 app.get('/', (req,res) => {
     res.cookie('meuCookie2024', 'abcde');
     res.send('Hello World!'); 
