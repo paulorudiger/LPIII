@@ -19,3 +19,4 @@ function comparePassword(storedPassword, salt, providedPassword) {
     return hash === storedPassword
 }
 module.exports.criarUsuario = criarUsuario;
+module.exports.comparePassword = comparePassword;
